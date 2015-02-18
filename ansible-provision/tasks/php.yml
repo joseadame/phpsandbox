@@ -1,0 +1,7 @@
+---
+- name: php | install php
+  apt: pkg=php5 state=latest
+
+- name: php | install php packages
+  apt: pkg={{ item }} state=latest
+  with_items: php_packages

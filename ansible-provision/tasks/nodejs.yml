@@ -1,0 +1,6 @@
+---
+- name: nodejs | adding sources
+  shell: curl -sL https://deb.nodesource.com/setup | sudo bash -
+
+- name: nodejs | installing nodejs and npm
+  apt: pkg=nodejs state=latest

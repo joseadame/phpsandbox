@@ -1,0 +1,27 @@
+---
+- hosts: all
+  sudo: true
+
+  vars:
+    project_root: /vagrant
+    server_name: "localhost"
+    sys_packages: ['git', 'build-essential']
+    php_packages: ['php5-dev', 'php-apc', 'php5-sqlite', 'php5-mysql']
+    apt_repositories: []
+    sf2_git: https://github.com/csuarez/ibazaar
+    mysql_root_password: 'root'
+
+  tasks:
+    - include: tasks/init.yml
+    - include: tasks/php.yml
+    - include: tasks/apache.yml
+    - include: tasks/mysql.yml
+    - include: tasks/composer.yml
+    - include: tasks/nodejs.yml
+    - include: tasks/less.yml
+
+  handlers:
+    - name: restart apache
+      service: name=apache2 state=restarted
+    - name: restart mysql
+      service: name=mysqld state=restarted
