@@ -2513,7 +2513,9 @@
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
             <argument type="collection">
+              <argument key="OfertaBundle">Cupon\OfertaBundle\Entity</argument>
               <argument key="CiudadBundle">Cupon\CiudadBundle\Entity</argument>
+              <argument key="TiendaBundle">Cupon\TiendaBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2533,11 +2535,39 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
+                        <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Cupon\OfertaBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
                   <argument>Cupon\CiudadBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Cupon\TiendaBundle\Entity</argument>
                 </call>
               </service>
             </argument>

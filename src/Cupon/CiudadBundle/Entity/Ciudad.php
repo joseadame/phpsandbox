@@ -1,7 +1,7 @@
 <?php
-namespace Cupon\CiudadBundle\Entity
+namespace Cupon\CiudadBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM
+use Doctrine\ORM\Mapping as ORM;
 
 /**
 * @ORM\Entity
@@ -14,9 +14,9 @@ class Ciudad  {
 	* @ORM\GeneratedValue
 	*/
 	protected $id;
-	/** @ORM\Column(type="string" length=100) */
+	/** @ORM\Column(type="string", length=100) */
 	protected $nombre;
-	/** @ORM\Column(type="string" length=100) */
+	/** @ORM\Column(type="string", length=100) */
 	protected $slug;
 
 	public function getId() {
@@ -37,5 +37,9 @@ class Ciudad  {
 
 	public function setSlug($slug) {
 		$this->slug = $slug;
+	}
+
+	public function _toString() {
+		return $this->getNombre();
 	}
 }
