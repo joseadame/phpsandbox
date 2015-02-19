@@ -622,7 +622,7 @@ class appDevDebugProjectContainer extends Container
         $b = new \Doctrine\DBAL\Configuration();
         $b->setSQLLogger($a);
 
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'symfony', 'user' => 'root', 'password' => NULL, 'charset' => 'UTF8', 'driverOptions' => array()), $b, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'cupon', 'user' => 'cupon', 'password' => 'cupon', 'charset' => 'UTF8', 'driverOptions' => array()), $b, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), array());
     }
 
     /**
@@ -650,15 +650,16 @@ class appDevDebugProjectContainer extends Container
     {
         $a = $this->get('annotation_reader');
 
-        $b = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => '/vagrant/src/Cupon/OfertaBundle/Entity', 1 => '/vagrant/src/Cupon/CiudadBundle/Entity', 2 => '/vagrant/src/Cupon/TiendaBundle/Entity'));
+        $b = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => '/vagrant/src/Cupon/OfertaBundle/Entity', 1 => '/vagrant/src/Cupon/CiudadBundle/Entity', 2 => '/vagrant/src/Cupon/TiendaBundle/Entity', 3 => '/vagrant/src/Cupon/UsuarioBundle/Entity'));
 
         $c = new \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain();
         $c->addDriver($b, 'Cupon\\OfertaBundle\\Entity');
         $c->addDriver($b, 'Cupon\\CiudadBundle\\Entity');
         $c->addDriver($b, 'Cupon\\TiendaBundle\\Entity');
+        $c->addDriver($b, 'Cupon\\UsuarioBundle\\Entity');
 
         $d = new \Doctrine\ORM\Configuration();
-        $d->setEntityNamespaces(array('OfertaBundle' => 'Cupon\\OfertaBundle\\Entity', 'CiudadBundle' => 'Cupon\\CiudadBundle\\Entity', 'TiendaBundle' => 'Cupon\\TiendaBundle\\Entity'));
+        $d->setEntityNamespaces(array('OfertaBundle' => 'Cupon\\OfertaBundle\\Entity', 'CiudadBundle' => 'Cupon\\CiudadBundle\\Entity', 'TiendaBundle' => 'Cupon\\TiendaBundle\\Entity', 'UsuarioBundle' => 'Cupon\\UsuarioBundle\\Entity'));
         $d->setMetadataCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_metadata_cache'));
         $d->setQueryCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_query_cache'));
         $d->setResultCacheImpl($this->get('doctrine_cache.providers.doctrine.orm.default_result_cache'));
@@ -3726,9 +3727,9 @@ class appDevDebugProjectContainer extends Container
             'database_driver' => 'pdo_mysql',
             'database_host' => '127.0.0.1',
             'database_port' => NULL,
-            'database_name' => 'symfony',
-            'database_user' => 'root',
-            'database_password' => NULL,
+            'database_name' => 'cupon',
+            'database_user' => 'cupon',
+            'database_password' => 'cupon',
             'mailer_transport' => 'smtp',
             'mailer_host' => '127.0.0.1',
             'mailer_user' => NULL,
