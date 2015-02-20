@@ -20,6 +20,7 @@
       <parameter key="CiudadBundle">Cupon\CiudadBundle\CiudadBundle</parameter>
       <parameter key="TiendaBundle">Cupon\TiendaBundle\TiendaBundle</parameter>
       <parameter key="UsuarioBundle">Cupon\UsuarioBundle\UsuarioBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -30,9 +31,9 @@
     <parameter key="database_driver">pdo_mysql</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">symfony</parameter>
-    <parameter key="database_user">root</parameter>
-    <parameter key="database_password">null</parameter>
+    <parameter key="database_name">cupon</parameter>
+    <parameter key="database_user">cupon</parameter>
+    <parameter key="database_password">cupon</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
@@ -2436,9 +2437,9 @@
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
-        <argument key="dbname">symfony</argument>
-        <argument key="user">root</argument>
-        <argument key="password">null</argument>
+        <argument key="dbname">cupon</argument>
+        <argument key="user">cupon</argument>
+        <argument key="password">cupon</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
       </argument>
@@ -2516,6 +2517,7 @@
               <argument key="OfertaBundle">Cupon\OfertaBundle\Entity</argument>
               <argument key="CiudadBundle">Cupon\CiudadBundle\Entity</argument>
               <argument key="TiendaBundle">Cupon\TiendaBundle\Entity</argument>
+              <argument key="UsuarioBundle">Cupon\UsuarioBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2538,6 +2540,7 @@
                         <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/UsuarioBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2551,6 +2554,7 @@
                         <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/UsuarioBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -2564,10 +2568,25 @@
                         <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
                         <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/UsuarioBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
                   <argument>Cupon\TiendaBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>/vagrant/src/Cupon/OfertaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/CiudadBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/TiendaBundle/Entity</argument>
+                        <argument>/vagrant/src/Cupon/UsuarioBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>Cupon\UsuarioBundle\Entity</argument>
                 </call>
               </service>
             </argument>

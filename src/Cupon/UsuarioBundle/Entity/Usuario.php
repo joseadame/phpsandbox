@@ -4,6 +4,7 @@ namespace Cupon\UsuarioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * Usuario
  *
@@ -375,10 +376,8 @@ class Usuario
     /**
      * Set ciudad
      *
-     * @param string $ciudad
-     * @return Usuario
      */
-    public function setCiudad(Cupon\CiudadBundle\Entity\Ciudad $ciudad)
+    public function setCiudad(\Cupon\CiudadBundle\Entity\Ciudad $ciudad)
     {
         $this->ciudad = $ciudad;
 
