@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 44448e,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/ayuda,1424266343,
 fa3aef,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/privacidad,1424266599,c8b878
 c8b878,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/privacidad,1424266599,
@@ -26,3 +27,19 @@ d51f82,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/estatica/privacidad/,14242
 7e9d5c,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/estatica/ayuda/,1424270591,
 d9b9e0,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/estatica/ayuda,1424378604,
 8fe060,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/estatica/ayuda/,1424378605,
+=======
+a73bd1,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424435244,675bc8
+675bc8,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424435244,
+f35e6a,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424435306,
+8195bd,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424435307,
+9c8a0c,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424437601,
+7543a3,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424437602,
+2df8db,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/estatica/ayuda/,1424437606,
+ea0b44,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/estatica/privacidad/,1424437611,
+1935b0,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424437618,
+96d34f,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424437618,
+4dadc1,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424437621,
+c158dd,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424437622,
+4e7a7a,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424438001,336ef9
+336ef9,10.0.2.2,GET,http://127.0.0.1:7777/app_dev.php/,1424438001,
+>>>>>>> master

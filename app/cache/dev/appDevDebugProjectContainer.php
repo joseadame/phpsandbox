@@ -3717,6 +3717,7 @@ class appDevDebugProjectContainer extends Container
                 'CiudadBundle' => 'Cupon\\CiudadBundle\\CiudadBundle',
                 'TiendaBundle' => 'Cupon\\TiendaBundle\\TiendaBundle',
                 'UsuarioBundle' => 'Cupon\\UsuarioBundle\\UsuarioBundle',
+                'DoctrineFixturesBundle' => 'Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle',
                 'DebugBundle' => 'Symfony\\Bundle\\DebugBundle\\DebugBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',

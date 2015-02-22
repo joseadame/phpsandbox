@@ -20,6 +20,7 @@
       <parameter key="CiudadBundle">Cupon\CiudadBundle\CiudadBundle</parameter>
       <parameter key="TiendaBundle">Cupon\TiendaBundle\TiendaBundle</parameter>
       <parameter key="UsuarioBundle">Cupon\UsuarioBundle\UsuarioBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>

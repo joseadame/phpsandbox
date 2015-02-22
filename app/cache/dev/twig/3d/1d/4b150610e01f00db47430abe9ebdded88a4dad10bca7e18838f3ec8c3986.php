@@ -32,7 +32,11 @@ class __TwigTemplate_3d1d4b150610e01f00db47430abe9ebdded88a4dad10bca7e18838f3ec8
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
+<<<<<<< HEAD
         $context["__internal_30102d7841ff67f5500364e2be9636fe372cc0f98c2c0884b82dfff59beae325"] = $this;
+=======
+        $context["__internal_e6d98ff0cf4c17bcf47d3ac16f3bc0706fecca0093273589458364e5fdbd4c69"] = $this;
+>>>>>>> master
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
@@ -93,7 +97,11 @@ class __TwigTemplate_3d1d4b150610e01f00db47430abe9ebdded88a4dad10bca7e18838f3ec8
             echo "</code></td>
                 <td><code>";
             // line 34
+<<<<<<< HEAD
             echo $context["__internal_30102d7841ff67f5500364e2be9636fe372cc0f98c2c0884b82dfff59beae325"]->getdisplay_listener($context["listener"]);
+=======
+            echo $context["__internal_e6d98ff0cf4c17bcf47d3ac16f3bc0706fecca0093273589458364e5fdbd4c69"]->getdisplay_listener($context["listener"]);
+>>>>>>> master
             echo "</code></td>
             </tr>
         ";
@@ -131,7 +139,11 @@ class __TwigTemplate_3d1d4b150610e01f00db47430abe9ebdded88a4dad10bca7e18838f3ec8
                 echo "</code></td>
                     <td><code>";
                 // line 51
+<<<<<<< HEAD
                 echo $context["__internal_30102d7841ff67f5500364e2be9636fe372cc0f98c2c0884b82dfff59beae325"]->getdisplay_listener($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")), $context["listener"], array(), "array"));
+=======
+                echo $context["__internal_e6d98ff0cf4c17bcf47d3ac16f3bc0706fecca0093273589458364e5fdbd4c69"]->getdisplay_listener($this->getAttribute((isset($context["listeners"]) ? $context["listeners"] : $this->getContext($context, "listeners")), $context["listener"], array(), "array"));
+>>>>>>> master
                 echo "</code></td>
                 </tr>
             ";
