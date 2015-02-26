@@ -16,7 +16,7 @@ class Usuarios extends AbstractFixture implements OrderedFixtureInterface, Conta
 {
 	public function getOrder()
 	{
-		return 4;
+		return 40;
 	}
 	
 	private $container;
@@ -28,6 +28,7 @@ class Usuarios extends AbstractFixture implements OrderedFixtureInterface, Conta
 	{
 		// Obtener todas las ciudades de la base de datos
 		$ciudades = $manager->getRepository('CiudadBundle:Ciudad')->findAll();
+		var_dump($ciudades);
 		for ($i=1; $i<=200; $i++) {
 			$usuario = new Usuario();
 			$usuario->setNombre($this->getNombre());

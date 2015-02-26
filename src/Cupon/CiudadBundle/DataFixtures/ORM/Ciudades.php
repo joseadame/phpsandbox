@@ -3,15 +3,16 @@
 namespace  Cupon\CiudadBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Cupon\CiudadBundle\Entity\Ciudad;
 use Cupon\OfertaBundle\Util\Util;
 
-class Ciudades implements OrderedFixtureInterface {
+class Ciudades extends AbstractFixture implements OrderedFixtureInterface {
 
 	public function getOrder(){
-		return 1;
+		return 10;
 	}
 
 	public function load (ObjectManager $manager) {

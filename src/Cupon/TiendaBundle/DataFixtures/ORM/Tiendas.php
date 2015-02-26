@@ -4,7 +4,6 @@ namespace Cupon\TiendaBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Cupon\CiudadBundle\Entity\Ciudad;
 use Cupon\TiendaBundle\Entity\Tienda;
@@ -12,11 +11,11 @@ use Cupon\TiendaBundle\Entity\Tienda;
 * Fixtures de la entidad Tienda.
 * Crea para cada ciudad entre 2 y 5 tiendas con información muy realista.
 */
-class Tiendas extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
+class Tiendas extends AbstractFixture implements OrderedFixtureInterface
 {
 	public function getOrder()
 	{
-		return 2;
+		return 20;
 	}
 	
 	private $container;
@@ -28,6 +27,7 @@ class Tiendas extends AbstractFixture implements OrderedFixtureInterface, Contai
 	{
 		// Obtener todas las ciudades de la base de datos
 		$ciudades = $manager->getRepository('CiudadBundle:Ciudad')->findAll();
+		var_dump($ciudades);
 		$i = 1;
 		foreach ($ciudades as $ciudad) {
 			$numeroTiendas = rand(2, 5);
